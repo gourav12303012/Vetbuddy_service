@@ -13,8 +13,9 @@ const Testimonials = () => {
           Happy <span className="text-lime-500">Testimonials</span>
         </h2>
         <p className="text-gray-600 text-base leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.
+          Discover the heartwarming stories from families who have found their perfect companions 
+          through Animal Cove. These testimonials reflect the joy and love that our pets bring 
+          into people's lives, and the lasting impact of our adoption and care services.
         </p>
 
         {/* Testimonial Card */}

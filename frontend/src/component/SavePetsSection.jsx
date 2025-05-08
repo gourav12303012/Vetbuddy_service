@@ -21,9 +21,10 @@ export default function SavePetsSection() {
             5,000 cats & dogs every year.
           </h2>
           <p className="text-gray-600 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare.
+            Join our mission to provide loving homes for abandoned and stray animals. 
+            Your support helps us provide medical care, shelter, and rehabilitation 
+            for animals in need. Together, we can make a difference in their lives 
+            and create a better future for our furry friends.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button className="bg-lime-500 hover:bg-lime-600 text-white font-semibold py-2 px-6 rounded-full">
@@ -36,13 +37,6 @@ export default function SavePetsSection() {
         </div>
       </div>
 
-      {/* Logos Section */}
-      <div className="flex flex-wrap justify-center items-center gap-12 mt-12">
-        <img src="/images/logo1.png" alt="Logo 1" className="h-6" />
-        <img src="/images/logo2.png" alt="Logo 2" className="h-6" />
-        <img src="/images/logo3.png" alt="Logo 3" className="h-6" />
-        <img src="/images/logo4.png" alt="Logo 4" className="h-6" />
-      </div>
     </div>
   );
 }

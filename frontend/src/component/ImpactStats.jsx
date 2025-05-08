@@ -57,8 +57,10 @@ const ImpactStats = () => {
           <span className="text-gray-800">Numbers</span>
         </h2>
         <p className="text-gray-600 mt-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.
+          Our numbers tell a powerful story of transformation and hope. Each percentage 
+          represents countless lives changed through adoption, veterinary care, and 
+          community outreach. Together, we're building a better future for pets and 
+          their families, one success story at a time.
         </p>
         <button className="mt-6 bg-lime-300 hover:bg-lime-400 text-gray-800 font-semibold px-6 py-3 rounded-full transition">
           Donate To Our Cause

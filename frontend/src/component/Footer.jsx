@@ -20,11 +20,11 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-lime-400" />
-              New York
+              India
             </li>
             <li className="flex items-center gap-2">
               <FaPhone className="text-lime-400" />
-              (012) 3456 7890
+              (+91) 8578876005
             </li>
             <li className="flex items-center gap-2">
               <FaEnvelope className="text-lime-400" />
@@ -91,10 +91,10 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="border-t border-green-700 mt-10 pt-6 text-xs text-center sm:text-left sm:flex justify-between text-white/70">
-        <p>2024 © Animal Cove. All Rights Reserved</p>
+        <p>2025 © Animal Cove. All Rights Reserved</p>
         <div className="flex justify-center sm:justify-end gap-4 mt-2 sm:mt-0">
-          <span>Designed by Adrian Paval</span>
-          <span>Powered by Webflow</span>
+          <span>Designed by Techiee Gaurav</span>
+          <span>Powered by Techiee</span>
           <span>Privacy Policy</span>
         </div>
       </div>

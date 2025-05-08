@@ -14,9 +14,10 @@ const HeroSection = () => {
           Bonds With Furry Pet
         </h1>
         <p className="text-gray-600 mt-6 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+          We are dedicated to providing expert healthcare, tailored fun activities, and guided adoption services 
+          for our furry friends. Our community-driven approach ensures every pet finds a loving home while 
+          receiving the best care possible. Together, we're making a difference in the lives of thousands 
+          of cats and dogs every year.
         </p>
         <button className="mt-8 px-6 py-3 bg-lime-300 hover:bg-lime-400 text-gray-800 font-semibold rounded-full transition">
           About Us
