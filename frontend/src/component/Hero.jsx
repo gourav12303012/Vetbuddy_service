@@ -25,6 +25,7 @@ const Hero = () => {
   };
 
   return (
+
     <>
       {showDonation && <AnimatedDonation />}
       <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-white">
@@ -72,7 +73,16 @@ const Hero = () => {
               Donate
             </button>
           </div>
+
         </div>
+        <div className="mt-6 flex items-center justify-center md:justify-start gap-2 text-lime-600">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span className="font-semibold">30-Minute Service Guarantee</span>
+        </div>
+      </div>
+
 
         {/* Right Image */}
         <div className={`relative mt-10 md:mt-0 transition-all duration-500 delay-700 ${
@@ -104,9 +114,10 @@ const Hero = () => {
             alt="Pet 4"
             className="absolute bottom-2 right-8 w-16 h-16 border-4 border-lime-200 rounded-full"
           />
+
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
