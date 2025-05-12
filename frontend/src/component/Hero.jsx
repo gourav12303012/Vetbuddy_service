@@ -20,6 +20,10 @@ const Hero = () => {
     setShowDonation(true);
   };
 
+  const handleAdoptClick = () => {
+    navigate('/adopt');
+  };
+
   return (
     <>
       {showDonation && <AnimatedDonation />}
@@ -56,7 +60,7 @@ const Hero = () => {
             showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <button 
-              onClick={() => navigate('/adopt')}
+              onClick={handleAdoptClick}
               className="bg-lime-300 hover:bg-lime-400 text-gray-900 font-semibold px-6 py-3 rounded-full transition"
             >
               Adopt a Pet
