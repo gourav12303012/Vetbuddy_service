@@ -5,17 +5,17 @@ const services = [
   {
     title: "Compassionate Veterinary Care",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Our experienced veterinarians provide comprehensive medical care, from routine check-ups to specialized treatments, ensuring your pet's health and well-being at every stage of life.",
   },
   {
     title: "Tailored Enrichment Programs",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "We design personalized activities and training programs that stimulate your pet's mind and body, promoting their physical health and emotional well-being through engaging exercises and social interactions.",
   },
   {
     title: "Personalized Adoption Support",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Our dedicated team guides you through every step of the adoption process, offering expert advice and ongoing support to ensure a perfect match between pets and their new families.",
   },
 ];
 
@@ -45,9 +45,9 @@ const ComprehensiveCare = () => {
           <span className="text-lime-600">Tailored</span> for Every Furry Friend
         </h2>
         <p className="text-gray-600 mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+          At Vet Buddy, we understand that every pet is unique. Our comprehensive care approach combines 
+          expert veterinary services, personalized enrichment programs, and dedicated adoption support to 
+          ensure your pet receives the attention and care they deserve throughout their journey with us.
         </p>
 
         {/* Services List */}

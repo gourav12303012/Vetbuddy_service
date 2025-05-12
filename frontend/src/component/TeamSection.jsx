@@ -54,14 +54,15 @@ export default function TeamSection() {
   return (
     <div className="py-16 px-4 md:px-20 bg-white text-center">
       <h4 className="uppercase tracking-wide text-gray-500 mb-2">
-        Behind Animal Cove
+        Behind Vet Buddy
       </h4>
       <h2 className="text-4xl font-bold mb-4">
         Our Passionate <span className="text-lime-600">Team</span>
       </h2>
       <p className="max-w-xl mx-auto text-gray-600 mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique.
+        Meet the dedicated individuals who make Vet Buddy a special place for pets and their families. 
+        Our team combines professional expertise with genuine love for animals, working tirelessly to 
+        ensure every pet receives the care and attention they deserve.
       </p>
       <Button className="mb-12">About Our Team</Button>
 

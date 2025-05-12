@@ -4,7 +4,7 @@ import { User } from "../model/user.model.js";
 export const bookappointment = async (req, res) => {
   try {
     const { id } = req.params;
-    const { animalName, dateTime, address, DoctorName, reason } = req.body;
+    const { animalName, dateTime, address, DoctorName, reason,status } = req.body;
 
     // Validate required fields
     if (!animalName || !dateTime || !address || !DoctorName || !reason) {
@@ -48,6 +48,7 @@ export const bookappointment = async (req, res) => {
       address,
       DoctorName,
       reason,
+      status,
       userId: id,
     });
 

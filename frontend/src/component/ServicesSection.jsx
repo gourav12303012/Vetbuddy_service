@@ -4,22 +4,22 @@ const services = [
   {
     title: "Expert Healthcare",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+      "Our team of experienced veterinarians provides comprehensive medical care, from routine check-ups to specialized treatments. We ensure your pets receive the highest quality healthcare in a comfortable environment.",
   },
   {
     title: "Tailored Fun",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+      "We offer customized play and exercise programs designed to keep your pets active and happy. From agility training to social playgroups, we create engaging activities that match your pet's personality and needs.",
   },
   {
     title: "Guided Adoption",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+      "Our adoption specialists help you find the perfect pet match. We provide detailed profiles, meet-and-greet sessions, and post-adoption support to ensure successful, lasting relationships between pets and their new families.",
   },
   {
     title: "The Community",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+      "Join our vibrant community of pet lovers. We host regular events, workshops, and support groups to help pet owners connect, share experiences, and learn from each other while building lasting friendships.",
   },
 ];
 
@@ -30,8 +30,8 @@ const ServicesSection = () => {
         Our Comprehensive <span className="text-lime-500">Services</span>
       </h2>
       <p className="text-gray-600 max-w-xl mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique.
+        Discover our range of specialized services designed to provide the best care and support for your pets. 
+        From healthcare to community engagement, we're here to ensure your pets live happy, healthy lives.
       </p>
       <button className="mt-6 mb-10 px-6 py-2 bg-lime-300 hover:bg-lime-400 text-gray-800 font-semibold rounded-full transition">
         Learn More
@@ -58,11 +58,11 @@ const ServicesSection = () => {
               alt="Girl with dog"
               className="absolute inset-0 object-cover w-full h-full rounded-[2rem]"
             />
-            <img
+            {/* <img
               src="/images/paw.png"
               alt="Paw Icon"
               className="absolute bottom-4 left-4 w-8 h-8"
-            />
+            /> */}
           </div>
         </div>
 

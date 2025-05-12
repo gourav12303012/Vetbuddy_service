@@ -41,14 +41,15 @@ export default function BlogSection() {
   return (
     <div className="py-16 px-4 md:px-20 bg-white text-center">
       <h4 className="uppercase tracking-wide text-gray-500 mb-2">
-        Animal Cove Resources
+        Vet Buddy Resources
       </h4>
       <h2 className="text-4xl font-bold mb-4">
         <span className="text-lime-600">Explore</span> Our Blog for Tails of Joy
       </h2>
       <p className="max-w-xl mx-auto text-gray-600 mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique.
+        Dive into our collection of heartwarming stories, expert pet care advice, and adoption success stories. 
+        Our blog is your go-to resource for everything from pet health tips to inspiring adoption journeys, 
+        helping you create the best life for your furry companions.
       </p>
       <Button className="bg-lime-400 hover:bg-lime-500 text-white mb-12">
         Read Our Blog Posts

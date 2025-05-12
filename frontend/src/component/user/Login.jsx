@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Navbar from "../Navbar";
 
 export default function Login() {
@@ -149,12 +149,15 @@ export default function Login() {
                 </p>
               )}
 
-              <div className="text-center mt-4">
+              <div className="text-center mt-4 space-y-3">
+                <Link to="/forgot-password" className="text-lime-500 hover:text-lime-600 font-semibold block">
+                  Forgot Password?
+                </Link>
                 <p className="text-gray-600">
                   Don't have an account?{" "}
-                  <a href="/register" className="text-lime-500 hover:text-lime-600 font-semibold">
+                  <Link to="/register" className="text-lime-500 hover:text-lime-600 font-semibold">
                     Register now
-                  </a>
+                  </Link>
                 </p>
               </div>
             </form>

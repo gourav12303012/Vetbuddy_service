@@ -1,18 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const Volunteer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } ,reset} = useForm();
+  const [message,setMessage] =useState() 
 
-  const onSubmit = async (data) => {
-    console.log("Volunteer form data:", data);
-    // Here you would typically send the data to your backend
-    setIsFormSubmitted(true);
+
+  const onSubmit =async (data) => {
+    console.log(data);
+    try {
+        const res = await axios.post("http://localhost:5000/user/Volunteer", data, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+    
+        if (res.data.success === true) {
+          console.log(res.data);
+          setMessage(res.data.message," ", res.data.fullname)
+          reset()
+        }
+      } catch (error) {
+        console.log("Server is not responding");
+      }
   };
 
+
+
   return (
+
+
+
     <div className="min-h-screen bg-white">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -110,117 +131,73 @@ const Volunteer = () => {
               </div>
             ) : (
               <>
-                <h2 className="text-2xl font-bold text-gray-800 mb-6">Volunteer Application</h2>
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-200 focus:border-lime-500 transition"
-                      {...register("name", { required: "Name is required" })}
-                    />
-                    {errors.name && (
-                      <p className="text-sm text-red-500 mt-1">{errors.name.message}</p>
-                    )}
-                  </div>
+              <div className="max-w-xl mx-auto p-4 bg-white rounded-lg shadow-md">
+  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <div>
+      <label htmlFor="fullname" className="block text-sm font-medium text-gray-700">Full Name</label>
+      <input
+        type="text"
+        id="fullname"
+        {...register("fullname", { required: "Full name is required" })}
+        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      />
+      {errors.fullname && (
+        <p className="text-sm text-red-500 mt-1">{errors.fullname.message}</p>
+      )}
+    </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-200 focus:border-lime-500 transition"
-                      {...register("email", { required: "Email is required" })}
-                    />
-                    {errors.email && (
-                      <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>
-                    )}
-                  </div>
+    <div>
+      <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+      <input
+        type="email"
+        id="email"
+        {...register("email", { required: "Email is required" })}
+        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      />
+      {errors.email && (
+        <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>
+      )}
+    </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-200 focus:border-lime-500 transition"
-                      {...register("phone", { required: "Phone number is required" })}
-                    />
-                    {errors.phone && (
-                      <p className="text-sm text-red-500 mt-1">{errors.phone.message}</p>
-                    )}
-                  </div>
+    <div>
+      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone</label>
+      <input
+        type="text"
+        id="phone"
+        {...register("phone", { required: "Phone number is required" })}
+        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      />
+      {errors.phone && (
+        <p className="text-sm text-red-500 mt-1">{errors.phone.message}</p>
+      )}
+    </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Areas of Interest
-                    </label>
-                    <div className="space-y-2">
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          value="animal_care"
-                          className="rounded text-lime-500 focus:ring-lime-500"
-                          {...register("interests")}
-                        />
-                        <span className="ml-2 text-gray-600">Animal Care</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          value="adoption_support"
-                          className="rounded text-lime-500 focus:ring-lime-500"
-                          {...register("interests")}
-                        />
-                        <span className="ml-2 text-gray-600">Adoption Support</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          value="foster_care"
-                          className="rounded text-lime-500 focus:ring-lime-500"
-                          {...register("interests")}
-                        />
-                        <span className="ml-2 text-gray-600">Foster Care</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          value="events"
-                          className="rounded text-lime-500 focus:ring-lime-500"
-                          {...register("interests")}
-                        />
-                        <span className="ml-2 text-gray-600">Event Coordination</span>
-                      </label>
-                    </div>
-                  </div>
+    <div>
+      <label htmlFor="interest" className="block text-sm font-medium text-gray-700">Interest</label>
+      <input
+        type="text"
+        id="interest"
+        {...register("interest", { required: "Interest is required" })}
+        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      />
+      {errors.interest && (
+        <p className="text-sm text-red-500 mt-1">{errors.interest.message}</p>
+      )}
+    </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Availability
-                    </label>
-                    <textarea
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-lime-200 focus:border-lime-500 transition"
-                      rows="3"
-                      placeholder="Please describe your availability..."
-                      {...register("availability", { required: "Availability information is required" })}
-                    />
-                    {errors.availability && (
-                      <p className="text-sm text-red-500 mt-1">{errors.availability.message}</p>
-                    )}
-                  </div>
+    <div>
+      <button
+        type="submit"
+        className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      >
+        Submit
+      </button>
+    </div>
+    <h3 className='text-red-600'>{message}</h3>
+  </form>
+</div>
 
-                  <button
-                    type="submit"
-                    className="w-full bg-lime-500 hover:bg-lime-600 text-white font-semibold py-3 rounded-xl transition duration-200"
-                  >
-                    Submit Application
-                  </button>
-                </form>
-              </>
+              </> 
             )}
           </div>
         </div>

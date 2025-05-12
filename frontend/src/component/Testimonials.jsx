@@ -13,18 +13,19 @@ const Testimonials = () => {
           Happy <span className="text-lime-500">Testimonials</span>
         </h2>
         <p className="text-gray-600 text-base leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.
+          Discover the heartwarming stories from families who have found their perfect companions 
+          through Vet Buddy. These testimonials reflect the joy and love that our pets bring 
+          into people's lives, and the lasting impact of our adoption and care services.
         </p>
 
         {/* Testimonial Card */}
         <div className="border border-lime-300 rounded-xl p-6 space-y-4 max-w-lg bg-white shadow-md">
           <p className="text-gray-700 leading-relaxed">
-            Our experience with Animal Cove has been nothing short of
+            Our experience with Vet Buddy has been nothing short of
             extraordinary. We adopted Luna, a playful Labrador mix, and she has
             filled our home with boundless joy. The team's dedication to the
             well-being of the animals is truly heartwarming. We couldn't be
-            happier with our furry addition, all thanks to Animal Cove.
+            happier with our furry addition, all thanks to Vet Buddy.
           </p>
           <div className="flex items-center gap-4">
             <img

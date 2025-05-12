@@ -23,6 +23,11 @@ const appointmentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    status: {
+      type: String,
+      enum: ["accept", "reject", "book again", "pending"],
+      default: "pending"
+    },
     userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
